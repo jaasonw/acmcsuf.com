@@ -9,6 +9,10 @@
     "1FAIpQLSfJanOAaL2mdjpf193tFeCClBzpW_COEO_crAE8hqsJCB_Rwg";
 </script>
 
+<svelte:head>
+  <title>acmCSUF | connect</title>
+</svelte:head>
+
 <CommonHero src="../assets/png/acm-csuf-badge.png" alt="acm-CSUF-Logo">
   <h1 slot="title">connect</h1>
   <h2 slot="headline">follow us!</h2>

@@ -6,6 +6,10 @@
   import CallToActionSection from "@/components/sections/call-to-action-section.svelte";
 </script>
 
+<svelte:head>
+  <title>acmCSUF | nodebuds</title>
+</svelte:head>
+
 <CommonHero src="../assets/png/node-buds-badge.png" alt="CSUF NodeBuds Logo">
   <h1 slot="title">node<span class="brand-nodebuds">Buds</span></h1>
   <h2 slot="headline">what is node<span class="brand-nodebuds">Buds</span>?</h2>

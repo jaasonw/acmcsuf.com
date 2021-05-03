@@ -6,6 +6,10 @@
   import CallToActionSection from "@/components/sections/call-to-action-section.svelte";
 </script>
 
+<svelte:head>
+  <title>acmCSUF | paths</title>
+</svelte:head>
+
 <CommonHero>
   <h1 slot="title">paths</h1>
   <h2 slot="headline">what are paths?</h2>

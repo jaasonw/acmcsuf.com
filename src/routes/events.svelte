@@ -21,6 +21,10 @@
   });
 </script>
 
+<svelte:head>
+  <title>acmCSUF | events</title>
+</svelte:head>
+
 <CommonHero src="../assets/png/acm-csuf-badge.png" alt="acm-CSUF-Logo">
   <h1 slot="title">events</h1>
   <h2 slot="headline">all you need to know!</h2>

@@ -5,6 +5,10 @@
   import CallToActionSection from "@/components/sections/call-to-action-section.svelte";
 </script>
 
+<svelte:head>
+  <title>acmCSUF | about</title>
+</svelte:head>
+
 <CommonHero>
   <h1 slot="title">about</h1>
   <h2 slot="headline">
