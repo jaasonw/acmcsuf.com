@@ -11,6 +11,8 @@
   let isLoading = true;
 
   onMount(() => {
+    document.title = "acmCSUF | events";
+
     // Lazily load the ICAL data for the event carousel.
     fetch("../events.json")
       .then((response) => response.json())
@@ -20,10 +22,6 @@
       });
   });
 </script>
-
-<svelte:head>
-  <title>acmCSUF | events</title>
-</svelte:head>
 
 <CommonHero src="../assets/png/acm-csuf-badge.png" alt="acm-CSUF-Logo">
   <h1 slot="title">events</h1>

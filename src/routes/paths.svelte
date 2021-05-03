@@ -1,14 +1,13 @@
 <script lang="ts">
+  import { onMount } from "svelte";
   import { acmAlgo, acmCreate, acmDev } from "../lib/acm-paths";
   import CommonHero from "@/components/sections/common-hero.svelte";
   import PathSection from "@/components/paths/path-section.svelte";
   import Spacing from "@/components/sections/spacing.svelte";
   import CallToActionSection from "@/components/sections/call-to-action-section.svelte";
-</script>
 
-<svelte:head>
-  <title>acmCSUF | paths</title>
-</svelte:head>
+  onMount(() => (document.title = "acmCSUF | paths"));
+</script>
 
 <CommonHero>
   <h1 slot="title">paths</h1>

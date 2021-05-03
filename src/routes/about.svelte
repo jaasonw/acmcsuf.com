@@ -1,13 +1,12 @@
 <script lang="ts">
+  import { onMount } from "svelte";
   import CommonHero from "@/components/sections/common-hero.svelte";
   import OfficerProfileList from "@/components/sections/officer-profile-list.svelte";
   import Spacing from "@/components/sections/spacing.svelte";
   import CallToActionSection from "@/components/sections/call-to-action-section.svelte";
-</script>
 
-<svelte:head>
-  <title>acmCSUF | about</title>
-</svelte:head>
+  onMount(() => (document.title = "acmCSUF | about"));
+</script>
 
 <CommonHero>
   <h1 slot="title">about</h1>
