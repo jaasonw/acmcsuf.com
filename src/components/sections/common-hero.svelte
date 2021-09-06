@@ -35,6 +35,7 @@
 
   section header :global(h1) {
     margin: 0;
+    text-align: center;
     font-size: var(--heading-font-size);
     font-weight: bold;
     text-transform: lowercase;
