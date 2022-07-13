@@ -13,7 +13,7 @@
   import { Temporal } from '@js-temporal/polyfill';
   import { readingTime } from '$lib/blog/utils';
   import Labels from '$lib/components/blog/labels.svelte';
-  import BlogBody from '$lib/blog/blog-body.svelte';
+  import BlogBody from '$lib/components/blog/blog-body.svelte';
 
   export let posts: Newsletter[] = [];
 </script>
