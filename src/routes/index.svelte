@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-  <title>ACM at CSUF</title>
+  <title>Hello World!</title>
 </svelte:head>
 
 <Spacing --min="175px" --med="200px" --max="200px" />

@@ -5,10 +5,7 @@
 <section>
   <div class="container">
     <div class="left">
-      <h1 class="brand-header size-xl">
-        We are the largest tech community at
-        <b class="acm-blue">CSUF</b>
-      </h1>
+      <h1 class="brand-header size-xl">Hello world!</h1>
 
       <AcmButton text="Join us today!" link="/discord" />
     </div>
