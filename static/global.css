@@ -36,6 +36,7 @@ body,
   color: var(--acm-dark);
   padding: 0;
   margin: 0;
+  transition: 0.2s;
 }
 html,
 body,
@@ -45,6 +46,7 @@ body,
 
 body {
   background-color: var(--acm-light);
+  transition: 0.2s;
 }
 
 .brand-bold,
