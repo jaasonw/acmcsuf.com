@@ -13,15 +13,19 @@ export function parse(rawICAL: string, options?: ICALParseOptions): AcmEvent[] {
   const refDate = options.referenceDate ?? Temporal.Now.zonedDateTimeISO('America/Los_Angeles');
   const filterBefore = options.filterBefore !== undefined ? options.filterBefore : true;
 
+  let iterations = 0;
   for (const icalEvent of walkICAL(rawICAL)) {
     const acmEvent = makeAcmEvent(icalEvent, refDate);
-
     // skip events that have already ended (except when in debug mode)
     if (filterBefore && acmEvent.hasEnded) {
       continue;
     }
 
     acmEvents.push(acmEvent);
+    iterations++;
+    if (iterations >= options.maxEvents) {
+      break;
+    }
   }
 
   const sortedAcmEvents = acmEvents.sort((one, two) =>

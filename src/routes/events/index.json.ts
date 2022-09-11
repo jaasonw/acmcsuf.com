@@ -5,7 +5,7 @@ import { DEBUG } from '$lib/constants';
 import { events as SAMPLE_EVENTS } from '../../routes/events/_testdata/events';
 
 // Constants
-const caching = false; // Make this false to disable server-side caching in development.
+const caching = true; // Make this false to disable server-side caching in development.
 const expirationTimeout = 1e3 * 60 * 1; // Fetch updates every 1 minute.
 const ICAL_TARGET_URL =
   'https://calendar.google.com/calendar/ical/738lnit63cr2lhp7jtduvj0c9g%40group.calendar.google.com/public/basic.ics';
@@ -16,7 +16,7 @@ let events: AcmEvent[] = [];
 
 async function setCache(timestamp: number): Promise<AcmEvent[]> {
   const data = await fetch(ICAL_TARGET_URL).then((response) => response.text());
-  events = parse(data, { maxEvents: DEBUG ? 10 : undefined });
+  events = parse(data, { maxEvents: 30 });
 
   if (DEBUG && events.length === 0) {
     events = SAMPLE_EVENTS as AcmEvent[];
