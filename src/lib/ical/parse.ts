@@ -23,7 +23,7 @@ export function parse(rawICAL: string, options?: ICALParseOptions): AcmEvent[] {
 
     acmEvents.push(acmEvent);
     iterations++;
-    if (iterations >= options.maxEvents) {
+    if (iterations > options.maxEvents) {
       break;
     }
   }

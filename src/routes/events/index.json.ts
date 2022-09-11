@@ -16,7 +16,7 @@ let events: AcmEvent[] = [];
 
 async function setCache(timestamp: number): Promise<AcmEvent[]> {
   const data = await fetch(ICAL_TARGET_URL).then((response) => response.text());
-  events = parse(data, { maxEvents: 30 });
+  events = parse(data, { maxEvents: 10 });
 
   if (DEBUG && events.length === 0) {
     events = SAMPLE_EVENTS as AcmEvent[];
