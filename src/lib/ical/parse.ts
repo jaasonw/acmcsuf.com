@@ -15,6 +15,10 @@ export function parse(rawICAL: string, options?: ICALParseOptions): AcmEvent[] {
 
   let iterations = 0;
   for (const icalEvent of walkICAL(rawICAL)) {
+    iterations++;
+    if (iterations > options.maxEvents) {
+      break;
+    }
     const acmEvent = makeAcmEvent(icalEvent, refDate);
     // skip events that have already ended (except when in debug mode)
     if (filterBefore && acmEvent.hasEnded) {
@@ -22,10 +26,6 @@ export function parse(rawICAL: string, options?: ICALParseOptions): AcmEvent[] {
     }
 
     acmEvents.push(acmEvent);
-    iterations++;
-    if (iterations > options.maxEvents) {
-      break;
-    }
   }
 
   const sortedAcmEvents = acmEvents.sort((one, two) =>
