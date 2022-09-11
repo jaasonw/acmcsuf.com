@@ -5,7 +5,7 @@ import { DEBUG } from '$lib/constants';
 import { events as SAMPLE_EVENTS } from '../../routes/events/_testdata/events';
 
 // Constants
-const caching = true; // Make this false to disable server-side caching in development.
+const caching = false; // Make this false to disable server-side caching in development.
 const expirationTimeout = 1e3 * 60 * 1; // Fetch updates every 1 minute.
 const ICAL_TARGET_URL =
   'https://calendar.google.com/calendar/ical/738lnit63cr2lhp7jtduvj0c9g%40group.calendar.google.com/public/basic.ics';
